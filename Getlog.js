@@ -94,7 +94,7 @@ function exe(req, res, rf, data) {
         res.write('<p> 成功进入人数: '+ret.loginNum+'</p>');
         res.write('<p> 离开人数: '+ret.closeNum+'</p>');
         res.write('<p> 加载报错人数: '+ret.errorNum+'</p>');
-        res.write('<p> 未进入人数比例: '+(ret.errorNum+ret.closeNum)+'/'+ret.allNum+'&nbsp;&nbsp;&nbsp;&nbsp;('+Math.round(((ret.errorNum+ret.closeNum)/ret.allNum)*10000)/100+')</p>');
+        res.write('<p> 未进入人数比例: '+(ret.errorNum+ret.closeNum)+'/'+ret.allNum+'&nbsp;&nbsp;&nbsp;&nbsp;('+Math.round(((ret.errorNum+ret.closeNum)/ret.allNum)*10000)/100+'%)</p>');
         res.write('</br>');
         var sum=0;
         for(jj=0;jj<outTimeArr.length;jj++){
