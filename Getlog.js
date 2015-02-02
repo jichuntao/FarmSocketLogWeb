@@ -42,7 +42,9 @@ function exe(req, res, rf, data) {
         {
 
             var u=users[jj];
-
+            if(!u.percent){
+                console.log(u);
+            }
             var loadingTime=Math.round(u.loadingTime/1000);
             if(u.status=='error'){
                 ret.errorNum++;
