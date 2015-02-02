@@ -189,6 +189,7 @@ function start(cb) {
     var path = dir +'/'+ files[i] ;
     i++;
     user={};
+    user.percent=0;
     //console.log("Start read:" + path);
     openfile(path,callback);
     function callback(){
@@ -202,6 +203,7 @@ function start(cb) {
         path = dir +'/'+ files[i] ;
         i++;
         user={};
+        user.percent=0;
         //console.log("Start read:" + path);
         openfile(path,callback);
     }
