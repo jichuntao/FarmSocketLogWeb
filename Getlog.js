@@ -217,6 +217,9 @@ function exec(strs) {
         var obj = JSON.parse(data);
         var logtime = key.split('-')[0];
         var action = obj.action;
+        if(user && user.status2=='falseguide'){
+            return;
+        }
         if(action == 'login'){
             user.uid=obj.uid;
         }
@@ -230,6 +233,12 @@ function exec(strs) {
                 user.percent=obj.percent;
                 user.loadingTime=obj.time;
             }
+        }
+        else if(action=='falseguide')
+        {
+            user.loadingTime=obj.time;
+            user.status='login';
+            user.status2='falseguide';
         }
         else if(action=='logout')
         {
