@@ -223,7 +223,7 @@ function exec(strs) {
         else if(action=='loading')
         {
             if(!user.percent){
-                user.percent=obj.percent;
+                user.percent=obj.parsercent;
                 user.loadingTime=obj.time;
             }
             if(obj.percent>user.percent){
